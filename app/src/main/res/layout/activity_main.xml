@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.janeaston.drawbitmap.CanvasView
+            android:id="@+id/view_Canvas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="LineSpeed: "
+                        android:textAlignment="textEnd"
+                        android:textSize="10sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar_LineSpeed"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:progress="19" />
+
+                    <TextView
+                        android:id="@+id/textView_LineSpeed"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="5px"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="AngleSpeed: "
+                        android:textAlignment="textEnd"
+                        android:textSize="10sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar_AngleSpeed"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:progress="19" />
+
+                    <TextView
+                        android:id="@+id/textView_AngleSpeed"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.08rad"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_TurnLeft"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:text="L"
+                    app:cornerRadius="20dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button_Forward"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:text="F"
+                        app:cornerRadius="20dp" />
+
+                    <Button
+                        android:id="@+id/button_Backward"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="5dp"
+                        android:text="B"
+                        app:cornerRadius="20dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_TurnRight"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:text="R"
+                    app:cornerRadius="20dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
